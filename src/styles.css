@@ -1509,6 +1509,10 @@ h2 em {
   fill: currentColor;
 }
 
+.call-float {
+  display: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -2070,6 +2074,39 @@ h2 em {
   .whatsapp-float span {
     display: none;
   }
+
+  .call-float {
+    position: fixed;
+    z-index: 90;
+    right: 14px;
+    bottom: 76px;
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.82);
+    border-radius: 50%;
+    color: var(--white);
+    background: var(--teal);
+    box-shadow: 0 10px 30px rgba(6, 63, 66, 0.25);
+    transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+  }
+
+  .call-float:hover,
+  .call-float:focus-visible {
+    background: var(--teal-dark);
+    box-shadow: 0 16px 35px rgba(6, 63, 66, 0.32);
+    transform: translateY(-3px);
+  }
+
+  .call-float svg {
+    width: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2116,12 +2153,12 @@ h2 em {
   object-position: 58% center;
 }
 
-.doctor-detail {
-  background: #080a0b;
+.smile-detail {
+  background: var(--cream);
 }
 
-.doctor-detail img {
-  object-position: center;
+.smile-detail img {
+  object-position: center 46%;
 }
 
 .about-badge {
